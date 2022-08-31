@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Intrinsics.X86;
 
 namespace Metotlar
 {
@@ -20,6 +21,7 @@ namespace Metotlar
             urun2.Adi = "Karpuz";
             urun2.Fiyati = 20;
             urun2.Aciklama = "Diyarbakır Karpuzu";
+            
 
             Urun urun3 = new Urun();
             
@@ -30,10 +32,19 @@ namespace Metotlar
                 Console.WriteLine(urun.Adi+"'nın fiyatı:"+urun.Fiyati);
             }
 
+            //Encapsulation
             SepetManager sepetManager = new SepetManager();
 
-            sepetManager.Ekle();
+            sepetManager.Ekle(urun1);
+            sepetManager.Ekle(urun2);
+
+            sepetManager.Ekle2("Armut","Sarı armut",10,5);
+            sepetManager.Ekle2("Elma", "Yeşil elma", 10,5);
+            sepetManager.Ekle2("Karpuz", "Diyarbakır Karpuzu", 10, 5);
+
+            
+
         }
-        
+
     }
 }

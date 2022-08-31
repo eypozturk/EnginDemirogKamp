@@ -8,9 +8,13 @@ namespace Metotlar
 {
     class SepetManager
     {
-        public void Ekle()
+        public void Ekle(Urun urun)
         {
-            Console.WriteLine("Sepete eklendi");
+            Console.WriteLine(" Tebrikler! Sepete eklendi:"+" "+urun.Adi);
+        }
+        public void Ekle2(string urunAdi, string acıklama,double fiyat,int stokAdedi)
+        {
+            Console.WriteLine("Tebrikler ürün sepete eklendi: " + urunAdi);
         }
     }
 }
