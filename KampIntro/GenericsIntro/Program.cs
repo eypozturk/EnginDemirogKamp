@@ -18,7 +18,14 @@ namespace GenericsIntro
 
             MyList<string> isimler2 = new MyList<string>();
             isimler2.Add("eyq");
+            isimler2.Add("ahmet");
 
+           Console.WriteLine(isimler2.Length);
+
+            foreach (var isim in isimler2.Items)
+            {
+                Console.WriteLine(isim);
+            }
         }
     }
 }
